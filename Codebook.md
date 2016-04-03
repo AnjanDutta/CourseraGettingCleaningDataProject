@@ -1,4 +1,4 @@
-# Description of the variables in `tidy_uci_har.txt`.
+# Description of the variables
 
 ### Identifiers
 * `subject`: The ID of the test subject. Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.

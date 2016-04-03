@@ -20,4 +20,4 @@ The R code `run_analysis.R` performs the following jobs:
 * Appropriately labels the data set with descriptive variable names.
 * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-* The code book `CodeBook.md` describes the variables
+* The code book `CodeBook.md` describes the variables is `tidy_uci_har.txt`
