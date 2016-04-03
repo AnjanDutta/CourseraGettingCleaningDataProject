@@ -57,7 +57,11 @@ mean_and_std_features <- grep("-(mean|std)\\(\\)", features[, 2])
 x_data <- x_data[, mean_and_std_features]
 
 # correct the column names
-names(x_data) <- features[mean_and_std_features, 2]
+names_mean_and_std_features <- features[mean_and_std_features, 2]
+names_mean_and_std_features = gsub('-mean', 'Mean', names_mean_and_std_features)
+names_mean_and_std_features = gsub('-std', 'Std', names_mean_and_std_features)
+names_mean_and_std_features <- gsub('[-()]', '', names_mean_and_std_features)
+names(x_data) <- names_mean_and_std_features
 
 # Step 3: Use descriptive activity names to name the activities in the data set
 ###############################################################################
@@ -84,6 +88,6 @@ all_data <- cbind(x_data, y_data, subject_data)
 ###############################################################################
 
 # 67 -> 68 columns are activity & subject
-averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
+tidy_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
 
-write.table(averages_data, "tidy_uci_har.txt", row.name=FALSE)
+write.table(tidy_data, "tidy_uci_har.txt", row.name=FALSE)
