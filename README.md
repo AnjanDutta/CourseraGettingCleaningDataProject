@@ -1,15 +1,25 @@
 # Coursera Getting and Cleaning Data Project
 
-This repository contains the R code, documentation files and the resulting tidy data set of the Coursera "Getting and Cleaning data" project.
-
-The dataset being used is: [Human Activity Recognition Using Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+This repository contains folloing files:
 
 ## Files
 
-1. `run_analysis.R` contains all the code to perform the analyses described in the 5 steps. They can be launched in RStudio by just importing the file. 
-  * The code downloads and unzips the data in the same folder
-  * It then performs the subsequent data analysis from step one to step five
+1. The R code `run_analysis.R`.
+2. The documentation files `README.md` and `CodeBook.md`.
+3. The resulting tidy data set `tidy_uci_har.txt` generated through the Coursera "Getting and Cleaning data" project.
 
-2. `CodeBook.md` describes the variables, the data, and any transformations or work that was performed to clean up the data.
+## Dataset used
 
-3. The output of the 5th step is called `averages_data.txt`, and uploaded in the course project's form.
+[Human Activity Recognition Using Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
+## Description
+
+* The R code `run_analysis.R` performs the following jobs:
+1. Downloads and unzips the data from the above repo in the working directory.
+2. Merges the training and the test sets to create one data set.
+3. Extracts only the measurements on the mean and standard deviation for each measurement.
+4. Uses descriptive activity names to name the activities in the data set
+5. Appropriately labels the data set with descriptive variable names.
+6. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+* The code book `CodeBook.md` describes the variables

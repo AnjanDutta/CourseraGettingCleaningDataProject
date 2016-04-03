@@ -86,4 +86,4 @@ all_data <- cbind(x_data, y_data, subject_data)
 # 67 -> 68 columns are activity & subject
 averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
 
-write.table(averages_data, "averages_data.txt", row.name=FALSE)
+write.table(averages_data, "tidy_uci_har.txt", row.name=FALSE)
